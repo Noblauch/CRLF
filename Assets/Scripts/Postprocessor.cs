@@ -13,6 +13,7 @@ public class Postprocessor : AssetPostprocessor
     
     static void PostprocessPrefab(string prefabPath)
     {
+        Debug.Log("PP " + prefabPath);
         var prefabRoot = AssetDatabase.LoadMainAssetAtPath(prefabPath) as GameObject;
         PrefabUtility.SavePrefabAsset(prefabRoot);
     }
